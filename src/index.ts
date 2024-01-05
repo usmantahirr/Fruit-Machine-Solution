@@ -1,20 +1,11 @@
-// This is an example typescript definition type.
-type Example = {
-    example:string;
-}
+import FruitMachine from "./FruitMachine";
+import Player from "./Player";
 
-// You can complete this test using a Javascript class.
-export class ExampleClass {
-    constructor(private example: Example) {}
+const fm = new FruitMachine(new Player("Usman"));
 
-    init() {
-        return this.example as Example;
-    }
-}
+let runCount = 10;
 
-// OR
-
-// You can complete this using function expressions (ES6).
-const ExampleFunctionalExpression = (example: Example) => {
-    return example as Example;
+while (runCount) {
+  fm.run();
+  runCount -= 1;
 }
